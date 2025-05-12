@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+<h1> Ma Omaeno Syacho namcheondong ni sunderundaro! </h1>
+<p> atama kowasite yaru! </p>
+
+<!-- 이미지 삽입 -->
+<img src="https://yt3.googleusercontent.com/Z8RFtEUsoG7KbDg5NmNVOLFjINK7CWrqh56V3SMQTenbTT1qHjhYJFY-rUMNQkWt-NFAKrwS_XE=s900-c-k-c0x00ffffff-no-rj" alt="korose!" width="400">
+
+<p><a href="https://www.youtube.com/@bdsdl_studio" target="_blank"> Kimjeongeun batsal chulreong </a></p>
+
+</body>
+</html>
