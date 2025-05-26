@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>싸다리 게-임</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+    #ladder {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .column {
+      margin: 0 5px;
+      display: flex;
+      flex-direction: column;
+    }
+    .step {
+      width: 2px;
+      height: 20px;
+      background: black;
+      margin: 2px auto;
+      position: relative;
+    }
+    .step.cross {
+      background: transparent;
+    }
+    .step.cross::before {
+      content: '';
+      position: absolute;
+      top: 8px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: red;
+      z-index: 1;
+    }
+    input, button {
+      margin: 5px;
+      padding: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎲 오질라게 재밌는 싸다리 게-임</h1>
+  <input type="text" id="names" placeholder="참가자 이름들 (쉼표로 구분)">
+  <input type="text" id="results" placeholder="결과들 (쉼표로 구분)">
+  <button onclick="createLadder()">사다리 생성</button>
+  <div id="ladder"></div>
+  <button onclick="runGame()">결과 보기</button>
+  <div id="output"></div>
+
+  <script>
+    const ladderHeight = 15;
+    let players = [];
+    let results = [];
+
+    function createLadder() {
+      const namesInput = document.getElementById('names').value.trim();
+      const resultsInput = document.getElementById('results').value.trim();
+      if (!namesInput || !resultsInput) return alert("이름과 결과를 입력해주세요!");
+
+      players = namesInput.split(',').map(name => name.trim());
+      results = resultsInput.split(',').map(res => res.trim());
+
+      if (players.length !== results.length)
+        return alert("참가자 수와 결과 수가 일치해야 합니다.");
+
+      const ladderDiv = document.getElementById('ladder');
+      ladderDiv.innerHTML = "";
+
+      for (let i = 0; i < players.length; i++) {
+        const column = document.createElement('div');
+        column.className = 'column';
+        column.dataset.index = i;
+
+        for (let j = 0; j < ladderHeight; j++) {
+          const step = document.createElement('div');
+          step.className = 'step';
+
+          // 랜덤하게 가로줄 추가 (가로줄은 한 번에 하나만 생기도록)
+          if (i < players.length - 1 && Math.random() < 0.3) {
+            step.classList.add('cross');
+          }
+
+          column.appendChild(step);
+        }
+        ladderDiv.appendChild(column);
+      }
+
+      // 이름 표시
+      players.forEach((name, i) => {
+        document.querySelectorAll('.column')[i].insertAdjacentHTML('afterbegin', `<div>${name}</div>`);
+        document.querySelectorAll('.column')[i].insertAdjacentHTML('beforeend', `<div style="margin-top:10px;">?</div>`);
+      });
+    }
+
+    function runGame() {
+      const output = document.getElementById('output');
+      output.innerHTML = "<h3>결과</h3>";
+
+      let order = [...Array(players.length).keys()];
+
+      // 단순히 랜덤 셔플
+      for (let i = order.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [order[i], order[j]] = [order[j], order[i]];
+      }
+
+      // 결과 매칭
+      order.forEach((resIndex, i) => {
+        output.innerHTML += `<p>${players[i]} ➡️ ${results[resIndex]}</p>`;
+      });
+    }
+  </script>
+</body>
+</html>
