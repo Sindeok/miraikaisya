@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sindeok Lee - Official Website</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Noto+Sans+JP&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #121212;
+      --text-color: #f0f0f0;
+      --header-bg: #1e1e2f;
+      --nav-bg: #2a2a40;
+      --accent-color: #8a7aff;
+      --card-bg: #1c1c1c;
+    }
+    body {
+      font-family: 'Noto Sans KR', 'Noto Sans JP', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+    }
+    header {
+      background-color: var(--header-bg);
+      color: var(--text-color);
+      padding: 20px;
+      text-align: center;
+      position: relative;
+    }
+    header img {
+      width: 100%;
+      height: auto;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    .social-links {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      display: flex;
+      gap: 15px;
+    }
+    .social-links a {
+      color: var(--text-color);
+      font-size: 20px;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .social-links a:hover {
+      color: var(--accent-color);
+    }
+    .language-selector {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+    .language-selector select {
+      background-color: var(--nav-bg);
+      color: var(--text-color);
+      border: none;
+      padding: 5px 10px;
+      border-radius: 4px;
+    }
+    nav {
+      background-color: var(--nav-bg);
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px;
+    }
+    nav a {
+      color: var(--text-color);
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 40px;
+      max-width: 800px;
+      margin: auto;
+      background-color: var(--card-bg);
+      margin-top: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+    section img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: var(--header-bg);
+      color: var(--text-color);
+      margin-top: 40px;
+    }
+    .lang p, .lang div {
+      margin-bottom: 8px;
+      display: none;
+      white-space: pre-line;
+    }
+    .lang p.active, .lang div.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+ <header>
+    <div class="social-links">
+      <a href="https://www.youtube.com/@bdsdl_studio" target="_blank" aria-label="YouTube">
+        <i class="fab fa-youtube"></i>
+      </a>
+      <a href="https://www.instagram.com/bdsdl_studio/" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+
+    <img src="https://raw.githubusercontent.com/Sindeok/miraikaisya/refs/heads/main/%EC%98%A4%ED%94%BC%EC%85%9C%20%EC%9B%B9%EC%82%AC%EC%9D%B4%ED%8A%B8.png"
+         alt="Sindeok Lee Banner" />
+
+    <div class="language-selector">
+      <select id="languageSelect" onchange="changeLanguage()">
+        <option value="KR">KR</option>
+        <option value="EN" selected>EN</option>
+        <option value="JP">JP</option>
+      </select>
+    </div>
+  </header>
+
+  <nav>
+    <a href="#intro">Introduction</a>
+    <a href="#contents">Contents</a>
+    <a href="#news">News</a>
+    <a href="#goods">Goods</a>
+    <a href="#contact Me">Contact Me</a>
+  </nav>
+
+  <section id="intro">
+    <h2>Introduction about Sindeok</h2>
+    <div class="lang">
+      <p class="lang-text KR"><strong>하는 것과 하고픈 것이 많은 다능다몽(多能多夢) 크리에이터, 이신덕입니다!</strong>
+      <img src="https://raw.githubusercontent.com/Sindeok/miraikaisya/refs/heads/main/%EC%BA%A1%EC%B2%98.PNG" alt="mainpict" />
+      주요 활동 이력
+      - 유튜브 크리에이터 (2018.5~)
+      - 스포츠스태킹 前 국가대표 (2016 ASSC 국가대표 상비군, 2023 ASSC 연령선발 국가대표)
+      - 스포츠스태킹 코치·심판 (2024.4 코치자격증 취득, 2025.2 공인 3급심판 자격증 취득)
+      - 경성대학교 MCC 영상기자 (2023.9~)
+      - 작곡가·우타이테 (2021.11~)</p>
+      <p class="lang-text EN"><strong>Hello :) I'm Creator who does many things</strong>
+      <img src="https://raw.githubusercontent.com/Sindeok/miraikaisya/refs/heads/main/%EC%BA%A1%EC%B2%98.PNG" alt="mainpict" />
+      Career
+      - YouTube Creator (2018.5~)
+      - Sport Stacking Korean National Team (2016 ASSC, 2023 ASSC)
+      - Sport Stacking SSC(2024~), SSJ(2025~)
+      - Kyungsung Univ MCC Video Maker (2023.9~)
+      - Composer·Utaite (2021.11~)
+      </p>
+      <p class="lang-text JP"><strong>やってることとやりたいことが多い多能多夢クリエーター、新徳(しんとく)です！</strong>
+      <img src="https://raw.githubusercontent.com/Sindeok/miraikaisya/refs/heads/main/%EC%BA%A1%EC%B2%98.PNG" alt="mainpict" />  
+      活動リスト
+      - ユーチューブクリエーター (2018.5~)
+      - スポーツスタキング韓国代表 (2016 ASSC, 2023 ASSC)
+      - スポーツスタキングコーチ(2024~)、審判(2025~)
+      - 慶星大学校MCC映像記者 (2023.9~)
+      - 作曲家·歌い手(2021.11~)</p>
+    </div>
+  </section>
+
+  <section id="contents">
+    <h2>YouTube Channel Contents</h2>
+    <div class="lang">
+      <p class="lang-text KR"><strong>주력 유튜브 콘텐츠 소개</strong>
+- 음악 콘텐츠 (피아노·보컬 커버, 오리지널 곡 투고)
+- 브이로그
+- 스포츠스태킹 콘텐츠
+- 여행</p>
+      <p class="lang-text EN"><strong>What is Sindeok's Main YouTube Contents?</strong>
+- Music (Piano/Vocal Covers, Original Songs)
+- Vlogs
+- Sport Stacking
+- Travel</p>
+      <p class="lang-text JP"><strong>主なユーチューブコンテンツ</strong>
+- 音楽（ピアノ・ボーカルカバー、オリジナル曲）
+- ブイログ
+- スポーツスタッキング
+- 旅行</p>
+    </div>
+  </section>
+
+  <section id="news">
+    <h2>News</h2>
+    <div class="lang">
+      <div class="lang-text KR">
+        <h3>스포츠스태킹 공인 3급 심판으로서의 첫 걸음</h3>
+        <img src="https://raw.githubusercontent.com/Sindeok/miraikaisya/refs/heads/main/KakaoTalk_20250615_193748435.jpg" alt="스포츠스태킹 심판 활동" />
+        <h4>공인심판 교육을 이수하여 3급 심판이 된 후, 지난 5월 경기도 안양시 게임마이스터고에서 개최된 2025 중국 ASSC 국가대표 선발 챌린지 1차대회에서 공인심판으로서의 첫 업무를 맡았습니다.</h4>
+
+        <h3>1년만에 새로 투고한 오리지널 곡 ‘명성만발’</h3>
+        <img src="https://raw.githubusercontent.com/Sindeok/miraikaisya/refs/heads/main/%EB%AA%85%EC%84%B1%EB%A7%8C%EB%B0%9C%20%EC%84%AC%EB%84%A4%EC%9D%BC.png" alt="명성만발 곡 커버" />
+        <h4>2024년에 투고한 자작곡 'Yukitsune' 를 투고한 지 1년 후, 새로운 곡 '명성만발' 을 투고하였습니다. 큐베이스로 편곡, 믹싱, 마스터링을 하여 완성한 첫 오리지널 곡이라는 데 의의가 큽니다.</h4>
+      </div>
+
+      <div class="lang-text EN">
+        <h3>First doing judging at Sport Stacking Tournament as a SSJ</h3>
+        <img src="https://raw.githubusercontent.com/Sindeok/miraikaisya/refs/heads/main/KakaoTalk_20250615_193748435.jpg" alt="Sport Stacking Judging" />
+        <h4></h4>
+
+        <h3>New Original Song 'Myungsungmanbal' is uploaded on YouTube!</h3>
+        <img src="https://raw.githubusercontent.com/Sindeok/miraikaisya/refs/heads/main/%EB%AA%85%EC%84%B1%EB%A7%8C%EB%B0%9C%20%EC%84%AC%EB%84%A4%EC%9D%BC.png" alt="Myungseongmanbal Cover Art" />
+        <h4></h4>
+      </div>
+
+      <div class="lang-text JP">
+        <h3>スポーツスタッキング公認３級審判として初めで審判業務を担当！</h3>
+        <img src="https://raw.githubusercontent.com/Sindeok/miraikaisya/refs/heads/main/KakaoTalk_20250615_193748435.jpg" alt="スポーツスタッキング審判" />
+        <h4></h4>
+
+        <h3>1年ぶりに投稿したオリジナル曲「明星満発 (めいせいまんばつ)」</h3>
+        <img src="https://raw.githubusercontent.com/Sindeok/miraikaisya/refs/heads/main/%EB%AA%85%EC%84%B1%EB%A7%8C%EB%B0%9C%20%EC%84%AC%EB%84%A4%EC%9D%BC.png" alt="名声満発ジャケット" />
+        <h4></h4>
+      </div>
+    </div>
+  </section>
+
+  <section id="goods">
+    <h2>Goods</h2>
+    <div class="lang">
+      <p class="lang-text KR">굿즈 판매 페이지가 준비 중입니다.</p>
+      <p class="lang-text EN">Goods store is under construction.</p>
+      <p class="lang-text JP">グッズ販売ページは準備中です。</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <div class="lang">
+      <p class="lang-text KR">각종 문의는 아래 이메일로 부탁드립니다.
+      bonghyeon04@naver.com</p>
+      <p class="lang-text EN">Please send it to the email.
+      bonghyeon04@naver.com</p>
+      <p class="lang-text JP">お問い合わせは下記のメールアドレスでお願いします。
+      bonghyeon04@naver.ccom</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Sindeok Lee. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function changeLanguage() {
+      const lang = document.getElementById('languageSelect').value;
+      document.querySelectorAll('.lang-text').forEach(el => {
+        el.classList.remove('active');
+        if (el.classList.contains(lang)) {
+          el.classList.add('active');
+        }
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      changeLanguage();
+    });
+  </script>
+  <div id="music-player" style="position: fixed; bottom: 20px; right: 20px; background-color: #1c1c1c; border-radius: 8px; padding: 15px; width: 250px; box-shadow: 0 0 10px rgba(0,0,0,0.5); z-index: 1000;">
+    <h3 style="margin-top: 0; font-size: 16px; color: #8a7aff;">🎵 Sindeok Lee's Original Music</h3>
+    <div id="track-title" style="margin: 10px 0; font-weight: bold; font-size: 14px;">Select a track</div>
+    <audio id="audio" controls style="width: 100%; margin-bottom: 10px;">
+      Your browser does not support the audio element.
+    </audio>
+    <div id="playlist">
+      <button onclick="playTrack(0)" style="display: block; width: 100%; background: none; border: none; color: #f0f0f0; padding: 5px; text-align: left; cursor: pointer; font-size: 13px;">1. Flower Mountain</button>
+      <button onclick="playTrack(1)" style="display: block; width: 100%; background: none; border: none; color: #f0f0f0; padding: 5px; text-align: left; cursor: pointer; font-size: 13px;">2. River at night</button>
+      <button onclick="playTrack(2)" style="display: block; width: 100%; background: none; border: none; color: #f0f0f0; padding: 5px; text-align: left; cursor: pointer; font-size: 13px;">3. A Dragon Flying In The Galaxy</button>
+      <button onclick="playTrack(3)" style="display: block; width: 100%; background: none; border: none; color: #f0f0f0; padding: 5px; text-align: left; cursor: pointer; font-size: 13px;">4. A clear and blue landscape</button>
+      <button onclick="playTrack(4)" style="display: block; width: 100%; background: none; border: none; color: #f0f0f0; padding: 5px; text-align: left; cursor: pointer; font-size: 13px;">5. Good Night Under The Starlight</button>
+      <button onclick="playTrack(5)" style="display: block; width: 100%; background: none; border: none; color: #f0f0f0; padding: 5px; text-align: left; cursor: pointer; font-size: 13px;">6. Ryuu ga sumu sora no sima</button>
+      <button onclick="playTrack(6)" style="display: block; width: 100%; background: none; border: none; color: #f0f0f0; padding: 5px; text-align: left; cursor: pointer; font-size: 13px;">7. Inouter</button>
+      <button onclick="playTrack(7)" style="display: block; width: 100%; background: none; border: none; color: #f0f0f0; padding: 5px; text-align: left; cursor: pointer; font-size: 13px;">8. Mystery Space</button>
+      <button onclick="playTrack(8)" style="display: block; width: 100%; background: none; border: none; color: #f0f0f0; padding: 5px; text-align: left; cursor: pointer; font-size: 13px;">9. Yukitsune</button>
+      <button onclick="playTrack(9)" style="display: block; width: 100%; background: none; border: none; color: #f0f0f0; padding: 5px; text-align: left; cursor: pointer; font-size: 13px;">10. Myungsungmanbal</button>
+    </div>
+  </div>
+
+  <script>
+   const tracks = [
+  {
+    title: "Flower Mountain",
+    url: "https://raw.githubusercontent.com/Sindeok/miraikaisya/a73f20ab97d8fd1e9a9de2fd2d88f87195adb7a6/%ED%99%94%EC%82%B0%20(%E8%8A%B1%E5%B1%B1).mp3"
+  },
+  {
+    title: "River at night",
+    url: "https://raw.githubusercontent.com/Sindeok/miraikaisya/a73f20ab97d8fd1e9a9de2fd2d88f87195adb7a6/%EC%95%BC%ED%95%98%20(%E5%A4%9C%E6%B2%B3).mp3"
+  },
+  {
+    title: "A Dragon Flying In The Galaxy",
+    url: "https://raw.githubusercontent.com/Sindeok/miraikaisya/a73f20ab97d8fd1e9a9de2fd2d88f87195adb7a6/A%20Dragon%20Flying%20In%20The%20Galaxy.mp3"
+  },
+  {
+    title: "A clear and blue landscape",
+    url: "https://raw.githubusercontent.com/Sindeok/miraikaisya/a73f20ab97d8fd1e9a9de2fd2d88f87195adb7a6/%EC%B2%AD%EC%B2%AD%EC%B2%9C%EA%B2%BD%20(%E6%B7%B8%E9%9D%91%E5%A4%A9%E4%BA%AC).mp3"
+  },
+  {
+    title: "Good Night Under The Starlight",
+    url: "https://raw.githubusercontent.com/Sindeok/miraikaisya/a73f20ab97d8fd1e9a9de2fd2d88f87195adb7a6/%EB%B3%84%EB%B9%9B%20%EC%95%84%EB%9E%98%EC%97%90%EC%84%9C%20%EC%9E%98%20%EC%9E%90%EC%9A%94.mp3"
+  },
+  {
+    title: "Ryuu ga sumu sora no sima",
+    url: "https://raw.githubusercontent.com/Sindeok/miraikaisya/a73f20ab97d8fd1e9a9de2fd2d88f87195adb7a6/%EC%9A%A9%EC%9D%B4%20%EC%82%AC%EB%8A%94%20%ED%95%98%EB%8A%98%EC%84%AC.mp3"
+  },
+  {
+    title: "Inouter",
+    url: "https://raw.githubusercontent.com/Sindeok/miraikaisya/a73f20ab97d8fd1e9a9de2fd2d88f87195adb7a6/Inouter.mp3"
+  },
+  {
+    title: "Mystery Space",
+    url: "https://raw.githubusercontent.com/Sindeok/miraikaisya/a73f20ab97d8fd1e9a9de2fd2d88f87195adb7a6/Mystery%20Space.mp3"
+  },
+  {
+    title: "Yukitsune",
+    url: "https://raw.githubusercontent.com/Sindeok/miraikaisya/a73f20ab97d8fd1e9a9de2fd2d88f87195adb7a6/Yukitsune.mp3"
+  },
+  {
+    title: "Myungsungmanbal",
+    url: "https://raw.githubusercontent.com/Sindeok/miraikaisya/a73f20ab97d8fd1e9a9de2fd2d88f87195adb7a6/%EB%AA%85%EC%84%B1%EB%A7%8C%EB%B0%9C%20(%E6%98%8E%E6%98%9F%E6%BB%BF%E7%99%BC).mp3"
+  }
+];
+
+
+    function playTrack(index) {
+      const audio = document.getElementById("audio");
+      const trackTitle = document.getElementById("track-title");
+      audio.src = tracks[index].url;
+      trackTitle.textContent = tracks[index].title;
+      audio.play();
+    }
+  </script>
+</body>
+</html>
